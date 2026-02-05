@@ -50,8 +50,5 @@ if st.button("Predict Boiling Point"):
         prediction = model.predict(features)[0]
         st.success(f"Predicted BP: **{prediction:.2f} °C**")
         
-        # Display the molecule structure
-        img = Chem.Draw.MolToImage(mol)
-        st.image(img, caption="Molecular Structure")
     else:
         st.error("Invalid SMILES. Try 'CCCC' or 'c1ccccc1'")
