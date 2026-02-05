@@ -48,7 +48,7 @@ if st.button("Predict Boiling Point"):
     if mol:
         features = np.array([[fn(mol) for fn in descriptor_fns]])
         prediction = model.predict(features)[0]
-        st.success(f"Predicted BP: **{prediction:.2f} °C**")
+        st.success(f"Predicted BP: **{prediction:.2f} K**")
         
     else:
         st.error("Invalid SMILES. Try 'CCCC' or 'c1ccccc1'")
